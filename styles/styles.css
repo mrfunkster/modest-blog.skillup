@@ -98,8 +98,6 @@ h3 {
 
 .search {
     width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
 }
 
 .search-field {
@@ -179,7 +177,7 @@ h3 {
     .nav-menu a {
         height: 26px;
         padding: 3px 3px;
-        font-size: 12px;
+        font-size: 13px;
         margin: 0 1px;
     }
 }
