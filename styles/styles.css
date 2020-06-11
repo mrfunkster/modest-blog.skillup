@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    --transition-time: all .3s ease;
+    min-width: 150px;
+}
+
+
+/* Adaptive Grid */
+/* Mobile */
+@media(max-width: 767px) {}
+/* Tablet */
+@media(min-width: 768px) {}
+/* Laptop */
+@media(min-width: 992px) {}
+/* Desktop */
+@media(min-width: 1200px) {}
