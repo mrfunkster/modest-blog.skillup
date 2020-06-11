@@ -132,6 +132,14 @@ h3 {
     cursor: pointer;
 }
 
+/* Slider */
+.slider {
+    text-align: center;
+    height: calc(100vh - 115px);
+    line-height: calc(100vh - 115px);
+    text-transform: uppercase;
+}
+
 /* Adaptive Grid */
 /* Mobile */
 @media(max-width: 767px) {
