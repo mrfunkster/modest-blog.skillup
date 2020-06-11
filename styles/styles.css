@@ -133,12 +133,14 @@ h3 {
 }
 
 /* Slider */
-.slider {
+.viewport-height {
     text-align: center;
     height: calc(100vh - 115px);
     line-height: calc(100vh - 115px);
     text-transform: uppercase;
 }
+/* About */
+
 
 /* Adaptive Grid */
 /* Mobile */
