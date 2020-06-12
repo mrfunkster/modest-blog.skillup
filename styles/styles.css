@@ -422,7 +422,7 @@ h3 {
     padding-bottom: 25px;
 }
 .skill-card p {
-    font-size: 16px;
+    font-size: 14px;
 }
 .skill-image {
     width: 67px;
@@ -456,10 +456,62 @@ h3 {
     font-size: 18px;
 }
 .features-description p {
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 14px;
+    line-height: 22px;
 }
 
+/* Stay in touch */
+.map-image {
+    width: 100%;
+    height: 200px;
+}
+.map-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contact-information h3 {
+    padding-bottom: 20px;
+}
+.contact-information p {
+    font-size: 14px;
+}
+.contact-information-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #eaeef1; */
+    padding: 15px;
+    border-radius: 10px;
+}
+.green-btn {
+    border-color: #23b7a4;
+    background-color: #23b7a4;
+    color: white;
+    transition: var(--transition-time);
+    animation: green-btn-transitions 5s ease-in-out infinite;
+}
+.green-btn:hover {
+    background-color: white;
+    color: #23b7a4;
+    animation: none;
+    transition: var(--transition-time);
+}
+@keyframes green-btn-transitions {
+    0% {
+        background-color: #23b7a4;
+        color: white;
+    }
+    50% {
+        background-color: white;
+        color: #23b7a4;
+    }
+    100% {
+        background-color: #23b7a4;
+        color: white;
+    }
+}
 
 
 /* ADAPTIVE GRID */
@@ -580,6 +632,23 @@ h3 {
     .features-card:last-child {
         padding-bottom: 0;
     }
+    .contact-information h3 {
+        padding-bottom: 30px;
+    }
+    .skill-card p {
+        font-size: 16px;
+    }
+    .contact-information p {
+        font-size: 16px;
+    }
+    .features-description p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .contact-information h3 {
+        padding-left: 10px;
+        padding-bottom: 20px;
+    }
 }
 
 
@@ -645,6 +714,15 @@ h3 {
     .features-card {
         padding-bottom: 0;
     }
+    .map-image {
+        height: 300px;
+    }
+    .contact-information h3 {
+        padding-bottom: 40px;
+    }
+    .contact-content {
+        padding-top: 60px;
+    }
 }
 
 /* Desktop */
@@ -656,5 +734,8 @@ h3 {
     }
     .card-photo-section {
         height: 300px;
+    }
+    .map-image {
+        height: 345px;
     }
 }
