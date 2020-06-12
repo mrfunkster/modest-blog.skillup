@@ -577,6 +577,9 @@ h3 {
     .features-card {
         padding-bottom: 30px;
     }
+    .features-card:last-child {
+        padding-bottom: 0;
+    }
 }
 
 
