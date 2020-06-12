@@ -311,7 +311,7 @@ h3 {
 /* Lovely Work */
 .work-card {
     cursor: pointer;
-    padding-bottom: 15px;
+    padding-top: 15px;
 }
 .int-card {
     width: 100%;
@@ -406,6 +406,9 @@ h3 {
     border-color: #23b7a4;
     background-color: #23b7a4;
     transition: var(--transition-time);
+}
+.button-container {
+    padding-top: 15px;
 }
 
 
@@ -510,11 +513,11 @@ h3 {
     .card-photo-section {
         height: 375px;
     }
-    .work-card {
-        padding-bottom: 30px;
-    }
     .button {
         height: 45px;
+    }
+    .work-card {
+        padding-bottom: 15px;
     }
 }
 
