@@ -3,6 +3,8 @@ const anchors = document.querySelectorAll('a[href*="#"]')
 for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
     e.preventDefault()
+    anchors.forEach(btn => btn.classList.remove('active'));
+    this.classList.add('active');
     let viewportWidth = document.documentElement.clientWidth;
     let headerOffset;
     if(viewportWidth < 768) {
