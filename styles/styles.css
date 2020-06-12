@@ -172,6 +172,16 @@ h3 {
     left: 0;
 }
 /* Slider */
+.slider-background {
+    width: 100%;
+    height: 150px;
+}
+.slider-background img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .viewport-height {
     text-align: center;
     height: calc(100vh - 115px);
@@ -726,6 +736,9 @@ h3 {
     .content-row {
         padding-top: 60px;
     }
+    .slider-background {
+        height: 300px;
+    }
     .section-tittle {
         font-size: 30px;
     } 
@@ -774,6 +787,9 @@ h3 {
 /* Desktop */
 @media(min-width: 1200px) {
     /* Main */
+    .slider-background {
+        height: 660px;
+    }
     .point {
         width: 50px;
         height: 50px;
