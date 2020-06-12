@@ -222,6 +222,92 @@ h3 {
     height: 3px;
     background-color: #dde1e4;
 }
+/* Meet The Team */
+.card {
+    cursor: pointer;
+    padding-top: 15px;
+}
+.card-row {
+    justify-content: space-between;
+}
+.card img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-photo-section {
+    position: relative;
+}
+.overlay {
+    background-color: white;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: var(--transition-time);
+    z-index: 10;
+}
+.card:hover .overlay {
+    visibility: visible;
+    opacity: .5;
+    transition: var(--transition-time);
+}
+.card-social-links {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition-time);
+    z-index: 10;
+}
+.card:hover .card-social-links {
+    visibility: visible;
+    opacity: 1;
+}
+.card-social-link {
+    width: 50px;
+    height: 50px;
+    background-color: #3a454d;
+    margin-right: 1px;
+    transition: var(--transition-time);
+}
+.card-social-link:hover {
+    background-color: #4e5a62;
+    transition: var(--transition-time);
+}
+.card-social-link:last-child {
+    margin-right: 0;
+}
+.card-social-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-description {
+    background-color: #e1e6ea;
+    padding: 20px;
+    transition: var(--transition-time);
+}
+.card-description p {
+    font-size: 14px;
+}
+.card-description h3 {
+    font-size: 16px;
+}
+.card:hover .card-description {
+    background-color: #3a454d;
+}
+.card:hover .card-description h3,
+.card:hover .card-description p {
+    color: #dcdfe1;
+    transition: var(--transition-time);
+}
 
 /* ADAPTIVE GRID */
 /* Mobile */
@@ -318,6 +404,12 @@ h3 {
         width: 60px;
         height: 60px;
     }
+    .card {
+        padding-bottom: 15px;
+    }
+    .card-photo-section {
+        height: 375px;
+    }
 }
 
 /* Laptop */
@@ -359,6 +451,9 @@ h3 {
     .points-section {
         padding-top: 67px;
     }
+    .card-photo-section {
+        height: 240px;
+    }
 }
 
 /* Desktop */
@@ -367,5 +462,8 @@ h3 {
     .point {
         width: 50px;
         height: 50px;
+    }
+    .card-photo-section {
+        height: 300px;
     }
 }
