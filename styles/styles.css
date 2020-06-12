@@ -436,6 +436,9 @@ h3 {
 }
 
 /* Features */
+.features-card {
+    padding-bottom: 20px;
+}
 .features-photo-section {
     width: 100%;
 }
@@ -571,8 +574,11 @@ h3 {
     .features-description h3 {
         padding-bottom: 20px;
     }
+    .features-card {
+        padding-bottom: 30px;
+    }
 }
-}
+
 
 
 /* Laptop */
@@ -632,6 +638,9 @@ h3 {
     }
     .features-description h3 {
         padding-bottom: 25px;
+    }
+    .features-card {
+        padding-bottom: 0;
     }
 }
 
