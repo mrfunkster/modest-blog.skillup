@@ -228,7 +228,7 @@ h3 {
     padding-top: 15px;
 }
 .card-row {
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .card img{
     display: block;
@@ -308,6 +308,106 @@ h3 {
     color: #dcdfe1;
     transition: var(--transition-time);
 }
+/* Lovely Work */
+.work-card {
+    cursor: pointer;
+    padding-bottom: 15px;
+}
+.int-card {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.work-card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.gray-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: var(--transition-time);
+}
+.int-card:hover .gray-overlay {
+    background-color: rgba(0, 0, 0, .5);
+    transition: var(--transition-time);
+}
+.work-description{
+    background-color: #292f35;
+    padding: 20px 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: var(--transition-time);
+}
+.work-description p {
+    font-size: 18px;
+}
+.int-card:hover .work-description {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition: var(--transition-time);
+}
+.add-link-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-link {
+    width: 25px;
+    height: 25px;
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition-time);
+}
+.int-card:hover .add-link {
+    visibility: visible;
+    opacity: 1;
+    transition: var(--transition-time);
+}
+.add-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+}
+.add-link:hover {
+    transform: scale(1.5);
+    transition: var(--transition-time);
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 5px;
+    height: 35px;
+    width: 150px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition-time);
+}
+.button:hover {
+    border-color: #23b7a4;
+    background-color: #23b7a4;
+    transition: var(--transition-time);
+}
+
 
 /* ADAPTIVE GRID */
 /* Mobile */
@@ -410,6 +510,12 @@ h3 {
     .card-photo-section {
         height: 375px;
     }
+    .work-card {
+        padding-bottom: 30px;
+    }
+    .button {
+        height: 45px;
+    }
 }
 
 /* Laptop */
@@ -453,6 +559,9 @@ h3 {
     }
     .card-photo-section {
         height: 240px;
+    }
+    .button-container {
+        padding-top: 30px;
     }
 }
 
