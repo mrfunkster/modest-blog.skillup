@@ -435,6 +435,29 @@ h3 {
     object-fit: cover;
 }
 
+/* Features */
+.features-photo-section {
+    width: 100%;
+}
+.features-photo-section img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.features-description {
+    padding-top: 20px;
+}
+.features-description h3 {
+    padding-bottom: 25px;
+    font-size: 18px;
+}
+.features-description p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+
 
 /* ADAPTIVE GRID */
 /* Mobile */
@@ -485,10 +508,6 @@ h3 {
     /* Header */
     .header {
         height: 80px;
-    }
-    .logo img {
-        width: 100%;
-        object-fit: cover;
     }
     .nav-menu {
         display: flex;
@@ -543,8 +562,18 @@ h3 {
     .work-card {
         padding-bottom: 15px;
     }
-
+    .features-description {
+        padding-top: 30px;
+    }
+    .features-description h3 {
+        padding-bottom: 20px;
+    }
+    .features-description h3 {
+        padding-bottom: 20px;
+    }
 }
+}
+
 
 /* Laptop */
 @media(min-width: 992px) {
@@ -597,6 +626,12 @@ h3 {
     }
     .skill-row {
         padding-top: 0;
+    }
+    .features-description {
+        padding-top: 50px;
+    }
+    .features-description h3 {
+        padding-bottom: 25px;
     }
 }
 
