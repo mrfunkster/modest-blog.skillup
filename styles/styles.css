@@ -190,8 +190,8 @@ h3 {
 }
 /* About */
 .page-content {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .content-row {
     padding-top: 15px;
@@ -425,6 +425,9 @@ h3 {
     text-align: center;
     padding-top: 35px;
     padding-bottom: 35px;
+}
+.skill-card:last-child {
+    padding-bottom: 0;
 }
 .skill-card h3 {
     font-size: 17px;
