@@ -410,6 +410,30 @@ h3 {
 .button-container {
     padding-top: 15px;
 }
+/* What we do */
+.skill-card {
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+.skill-card h3 {
+    font-size: 17px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+.skill-card p {
+    font-size: 16px;
+}
+.skill-image {
+    width: 67px;
+    height: 67px;
+    margin: 0 auto;
+}
+.skill-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 
 /* ADAPTIVE GRID */
@@ -519,6 +543,7 @@ h3 {
     .work-card {
         padding-bottom: 15px;
     }
+
 }
 
 /* Laptop */
@@ -565,6 +590,13 @@ h3 {
     }
     .button-container {
         padding-top: 30px;
+    }
+    .skill-card {
+        padding-top: 85px;
+        padding-bottom: 0;
+    }
+    .skill-row {
+        padding-top: 0;
     }
 }
 
