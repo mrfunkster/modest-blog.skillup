@@ -1,0 +1,125 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, .5);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+.modal-block {
+    background-color: white;
+    padding: 30px;
+    margin-top: 100px;
+    position: relative;
+}
+.centered {
+    justify-content: center;
+}
+
+.close-btn {
+    background-color: #8d8f92;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    cursor: pointer;
+    transition: .3s;
+}
+.close-btn:hover {
+    transform: scale(1.1);
+}
+.close-btn::before,
+.close-btn::after {
+    content: '';
+    display: block;
+    transform-origin: center;
+    width: 4px;
+    height: 25px;
+    position: absolute;
+    background-color: white;
+    left: 50%;
+}
+.close-btn::before {
+    transform: rotate(-45deg) translateX(-50%);
+}
+.close-btn::after {
+    transform: rotate(45deg) translateX(-50%);
+    top: 3px;
+}
+
+.modal-block input,
+.modal-block textarea {
+    width: 100%;
+}
+
+.modal-block .input-tittle {
+    color: #8d8f92;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.modal-block .button {
+    margin-left: 15px;
+    border-color: #23b7a4;
+    background-color: #23b7a4;
+    color: white;
+    transition: .3s;
+}
+.modal-block .button:hover {
+    background-color: white;
+    color: #23b7a4;
+}
+
+.modal-block textarea {
+    resize: none;
+    width: 100%;
+    height: 160px;
+    border: none;
+    background-color: #eaeef1;
+    border-radius: 5px;
+    padding: 15px;
+    outline: none;
+    color: #8d8f92;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 30px;
+}
+.modal-block input {
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: none;
+    background-color: #eaeef1;
+    border-radius: 5px;
+    padding: 15px;
+    color: #8d8f92;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.lock {
+    overflow: hidden
+}
+
+@media(max-width: 767px) {
+    .close-btn {
+        top: 5px !important;
+        right: 5px !important;
+    }
+    .modal-block input,
+    .modal-block textarea {
+        margin-bottom: 20px;
+    }
+}

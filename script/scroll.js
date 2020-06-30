@@ -15,13 +15,9 @@ for (let anchor of anchors) {
     
     const blockID = anchor.getAttribute('href').substr(1);
     let block = document.getElementById(blockID);
-    let blockPosition = block.offsetTop;
-    let offsetPosition = blockPosition - headerOffset;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-        });
+    $('html, body').animate({
+        scrollTop: $(block).offset().top - headerOffset
+    }, 800);
     })
 }
 
