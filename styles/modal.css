@@ -9,6 +9,7 @@
     visibility: hidden;
     opacity: 0;
     transition: .3s;
+    overflow: auto;
 }
 
 .modal-block {
