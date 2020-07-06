@@ -49,10 +49,11 @@
 }
 .close-btn::before {
     transform: rotate(-45deg) translateX(-50%);
+    top: 1px;
 }
 .close-btn::after {
     transform: rotate(45deg) translateX(-50%);
-    top: 3px;
+    top: 4px;
 }
 
 .modal-block input,
