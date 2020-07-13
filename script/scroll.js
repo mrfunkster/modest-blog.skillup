@@ -1,5 +1,6 @@
 const anchors    = document.querySelectorAll('a[href*="#"]')
 const sections   = document.querySelectorAll('section');
+let header       = document.querySelector('.header');
 const scrollTime = 800;
 
 window.addEventListener('scroll', sectionScroll);
@@ -7,17 +8,12 @@ window.addEventListener('scroll', sectionScroll);
 for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
     window.removeEventListener('scroll', sectionScroll);
-    e.preventDefault()
+    e.preventDefault();
     anchors.forEach(btn => btn.classList.remove('active'));
     this.classList.add('active');
+    closeBurger();
 
-    let viewportWidth = document.documentElement.clientWidth;
-    let headerOffset;
-    if(viewportWidth < 768) {
-        headerOffset = 115;
-    } else {
-        headerOffset = 80;
-    }
+    let headerOffset = header.offsetHeight; 
 
     const blockID = anchor.getAttribute('href').substr(1);
     let block = document.getElementById(blockID);
@@ -35,12 +31,7 @@ function sectionScroll() {
     for (let section of sections) {
         let pageScroll = window.scrollY;
         let viewportWidth = document.documentElement.clientWidth;
-        let headerOffset;
-        if(viewportWidth < 768) {
-            headerOffset = 115;
-        } else {
-            headerOffset = 80;
-        }
+        let headerOffset = header.offsetHeight;
         if (scrollY >= (section.offsetTop - headerOffset)) {
             const navID ="#" + section.getAttribute('id');
             let nav = document.querySelector(`a[href="${navID}"]`);

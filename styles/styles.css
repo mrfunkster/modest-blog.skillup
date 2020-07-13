@@ -6,6 +6,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     --transition-time: all .3s ease;
     min-width: 150px;
+    overflow-x: hidden;
 }
 
 span {
@@ -635,26 +636,72 @@ h3 {
 /* Mobile */
 @media(max-width: 767px) {
     /* Header */
-    .nav-menu {
-        display: flex;
-        justify-content: center;
-        overflow-x: scroll;
+    .navigation {
+        position: absolute;
+        width: 75%;
+        background-color: #1d2126;
+        right: -100%;
+        top: 100%;
+        padding-bottom: 15px;
+        transition: var(--transition-time);
     }
-    .nav-menu::-webkit-scrollbar {
-        display: none;
+    .nav-menu {
+        overflow: auto;
+    }
+    .navigation.open-mobile-menu {
+        right: 0;
+    }
+    .nav-mobile-menu {
+        width: 22px;
+        height: 15px;
+        position: relative;
+        z-index: 1000;
+    }
+    .nav-mobile-menu > div {
+        background-color: white;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        transition: var(--transition-time);
+    }
+    .nav-mobile-menu > div:nth-child(1) {
+        top: 0;
+    }
+    .nav-mobile-menu > div:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .nav-mobile-menu > div:nth-child(3) {
+        bottom: 0;
+    }
+    .nav-mobile-menu.open-mobile > div:nth-child(1) {
+        top: 50%;
+        transform: rotate(45deg) translateY(-50%);
+    }
+    .nav-mobile-menu.open-mobile > div:nth-child(3) {
+        top: 50%;
+        transform: rotate(-45deg) translateY(-50%);
+    }
+    .nav-mobile-menu.open-mobile > div:nth-child(2) {
+        transform-origin: center;
+        transform: scale(0);
+    }
+    .nav-menu > li {
+        padding-left: 15%;
+        padding-right: 15%;
     }
     .menu {
-        width: 100%;
         padding-top: 10px;
         padding-bottom: 10px;
     }
     .menu a {
         font-size: 16px;
+        padding: 10px;
     }
     .logo {
-        padding-top: 10px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: center;
     }
     .search {
         padding-bottom: 10px;
@@ -665,14 +712,6 @@ h3 {
     }
 }
 @media(max-width: 576px) {
-    .nav-menu {
-        display: flex;
-        overflow-x: scroll;
-        justify-content: flex-start;
-    }
-    .nav-menu::-webkit-scrollbar {
-        display: none;
-    }
 }
 
 /* Tablet */
