@@ -640,22 +640,26 @@ h3 {
         position: absolute;
         width: 75%;
         background-color: #1d2126;
-        right: -100%;
+        right: 0;
         top: 100%;
         padding-bottom: 15px;
         transition: var(--transition-time);
+        visibility: hidden;
+        opacity: 0;
+        z-index: 100;
     }
     .nav-menu {
         overflow: auto;
     }
     .navigation.open-mobile-menu {
-        right: 0;
+        visibility: visible;
+        opacity: 1;
     }
     .nav-mobile-menu {
         width: 22px;
         height: 15px;
         position: relative;
-        z-index: 1000;
+        z-index: 9999;
     }
     .nav-mobile-menu > div {
         background-color: white;
