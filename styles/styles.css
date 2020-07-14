@@ -630,6 +630,9 @@ h3 {
     object-fit: cover;
     display: block;
 }
+.search-mobile {
+    display: none;
+}
 
 
 /* ADAPTIVE GRID */
@@ -656,8 +659,8 @@ h3 {
         opacity: 1;
     }
     .nav-mobile-menu {
-        width: 22px;
-        height: 15px;
+        width: 30px;
+        height: 20px;
         position: relative;
         z-index: 9999;
     }
@@ -709,6 +712,12 @@ h3 {
     }
     .search {
         padding-bottom: 10px;
+    }
+    .search-mobile {
+        display: block;
+    }
+    .main-search {
+        display: none;
     }
     /* Main */
     .points-section {

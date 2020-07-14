@@ -1,5 +1,6 @@
 let hamburgerBtn = document.querySelector('.nav-mobile-menu');
 let navMenu      = document.querySelector('.navigation');
+let main         = document.querySelector('.main');
 
 hamburgerBtn.addEventListener('click', function() {
     hamburgerBtn.classList.toggle('open-mobile');
@@ -20,4 +21,10 @@ function closeBurger() {
     document.body.classList.remove('lock');
     hamburgerBtn.classList.remove('open-mobile');
 }
+
+main.addEventListener('click', function(e) {
+    if (e.target != main) {
+        closeBurger();
+    }
+})
 
